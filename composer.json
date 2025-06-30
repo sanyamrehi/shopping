@@ -1,0 +1,8 @@
+{
+    "name": "shopping-cart/php-shopping-cart",
+    "description": "A simple PHP Shopping Cart",
+    "require": {
+        "php": ">=7.4",
+        "ext-mysqli": "*"
+    }
+}

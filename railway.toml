@@ -1,0 +1,20 @@
+[build]
+image = "php:8.1-apache"
+
+[build.commands]
+0 = "composer install"
+
+[deploy]
+command = "apache2-foreground"
+
+[env]
+DB_HOST = "database"
+DB_USER = "root"
+DB_PASS = ""
+DB_NAME = "shopping_cart"
+
+[env.production]
+DB_HOST = "${DATABASE_URL}"
+DB_USER = "${DATABASE_USER}"
+DB_PASS = "${DATABASE_PASSWORD}"
+DB_NAME = "${DATABASE_NAME}"
